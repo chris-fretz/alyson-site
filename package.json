@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A portfolio site for Alyson Barrett",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "sass src/sass/style.scss build/css/style.min.css --style=compressed --watch",
+    "build": "sass src/sass/style.scss build/css/style.min.css --no-source-map --style=compressed"
   },
   "repository": {
     "type": "git",
