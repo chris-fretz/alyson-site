@@ -87,7 +87,7 @@ img {
 	transition: $transition;
 	&:hover {
 		color: $white;
-		background-color: #ef0824;
+		background-color: $btn-hover;
 	}
 }
 .two-column {
@@ -116,3 +116,5 @@ img {
 .rel {
 	position: relative;
 }
+
+// TODO: Create focus state for all HTML elements
