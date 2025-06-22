@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "functions" as *;
+
+.hero {
+    background-image: url(/assets/homepage-hero.webp);
+    .wrap {
+        padding: 75px 0;
+        @media (min-width: 1024px) {
+            padding: 150px 0;
+        }
+        .overlay {
+            max-width: fit-content;
+            padding: 20px;
+        }
+
+    }
+}

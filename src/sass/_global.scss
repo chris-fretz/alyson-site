@@ -1,6 +1,37 @@
 @use "variables" as *;
 @use "functions" as *;
 
+body {
+	background-color: #fdfbf8;
+}
+main {
+	min-height: 100vh;
+}
+header,
+footer {
+	& > .flex-wrap {
+        justify-content: center;
+    }
+	.logo-link {
+		font-family: $header-font;
+		font-size: to-rem(32);
+		line-height: 1.5;
+		text-decoration: none;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+.nav {
+	ul {
+		display: flex;
+		gap: 15px;
+		justify-content: center;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+}
 .section {
     padding: clamp(80px, 6vw, 130px) 0;
 }
@@ -21,7 +52,7 @@ img {
 	padding: 0;
 }
 // For images wrapped in a figure
-.image-figure {
+.img-figure {
 	width: 100%;
     margin: 0;
     padding: 0;
@@ -36,10 +67,28 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 }
-.centered-text {
+.centered {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+.rounded {
+	border-radius: 50%;
+}
+.btn {
+	display: inline-block;
+	background-color: $maroon;
+	color: $white;
+	padding: 15px;
+	border-radius: 3px;
+	text-decoration: none;
+	margin-top: 10px;
+	font-size: to-rem(18);
+	transition: $transition;
+	&:hover {
+		color: $white;
+		background-color: #ef0824;
+	}
 }
 .two-column {
 	@media (min-width: 1024px) {
@@ -51,6 +100,19 @@ img {
 		max-width: fit-content;
 	}
 }
-body {
-	background-color: #fdfbf8;
+.overlay {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.45);
+		border-radius: 3px; 
+	}
+}
+.rel {
+	position: relative;
 }

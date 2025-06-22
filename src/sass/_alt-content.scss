@@ -1,0 +1,18 @@
+@use "variables" as *;
+@use "functions" as *;
+
+.alt-content {
+    .flex-wrap {
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        .content {
+            width: 100%;
+            max-width: 615px;
+        }
+        .img-figure {
+            max-width: 550px;
+            aspect-ratio: 550/550;
+        }
+    }
+}
